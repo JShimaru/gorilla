@@ -1,25 +1,29 @@
-import Records from "./Records"
+import Records from "../Records";
 
-function Receipts(){
-
-
+function Receipts(props){
+        
+    const Records = props
 
     return(
         <div>
                 <div className="orderName">
-                    <h3>{receipt1.person}</h3>
+                    <h3>{props.person}</h3>
                 </div>
-                <div className="order" id="button">
-                    <p>Main: {receipt1.order.main}</p>
-                    <p>Protein: {receipt1.order.protein}</p>
-                    <p>Rice: {receipt1.order.rice}</p>
-                    <p>Sauce: {receipt1.order.sauce}</p>
-                    <ul>Toppings: </ul>
-                    <li>{receipt1.order.toppings[0]}</li>
-                    <li>{receipt1.order.toppings[1]}</li>
-                    <p>Drink: {receipt1.order.drink}</p>
-                    <p>Cost: {receipt1.order.cost}</p>
-                    <button className="settled" id="settled" onClick={isPaid}>Paid in full?</button>
+                <div className="order">
+                    <span>Main: {props.order.main}</span>
+                    <span>Protein: {props.order.protein}</span>
+                    <span>Rice: {props.order.rice}</span>
+                    <span>Sauce: {props.order.sauce}</span>
+                        <span>
+                            <h6>Toppings:</h6>
+                        <ul> 
+                            <li>{props.order.toppings[0]}</li>
+                            <li>{props.order.toppings[1]}</li>
+                        </ul>
+                        </span>
+                    <span>Drink: {props.order.drink}</span>
+                    <span>Cost: {props.order.cost}</span>
+                    { props.paid ? <span><button className="settled" id="button" onClick={props.togglePay}>Settle Bill</button></span> : null }
                 </div>
         </div>
     )

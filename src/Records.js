@@ -1,4 +1,6 @@
-function Records(){
+import React from "react"
+
+const Records = () => {
 
 const receipt1 =
   {
@@ -47,12 +49,33 @@ const receipt3 = {
   paid: true
 }
 
+const Records = [{receipt1}, {receipt2}, {receipt3}]
 
+return(
+  <div>{Records.map(receipt => {
+    const { person, main, protein, rice, sauce, toppings, drink, cost, paid } = receipt;
     return(
-        <div>
-
-        </div>
+      <div><div className="orderName">
+      <h3>{person}</h3>
+  </div>
+  <div className="order">
+      <span>Main: {main}</span>
+      <span>Protein: {protein}</span>
+      <span>Rice: {rice}</span>
+      <span>Sauce: {sauce}</span>
+          <span>
+              <h6>Toppings:</h6>
+          <ul> 
+              <li>{toppings}</li>
+          </ul>
+          </span>
+      <span>Drink: {drink}</span>
+      <span>Cost: {cost}</span>
+      { paid ? <span><button className="settled" id="button">Settle Bill</button></span> : null }
+  </div></div>
     )
-}
+  })}</div>
+
+)}
 
 export default Records;

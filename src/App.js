@@ -1,18 +1,16 @@
 import React from 'react';
 import './App.css';
-import Records from './components/Records';
-import Receipts from './components/Receipts';
-import { useState } from 'react';
+import Records from './Records';
 
 
 function App() {
-  const [receipts, setReceipts] = useState(Receipts)
 
-
+  // const togglePay = event => set
 
   return (
     <div className="App">
       <Records />
+      
     </div>
   );
 }
