@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Receipts from './components/Receipts';
 import Records from './Records';
 
 
@@ -9,8 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <Records />
-      
+      <Receipts Records = {Records}/>
     </div>
   );
 }
