@@ -4,8 +4,10 @@ function Receipts(props){
         const {Records} = props
 
     return(
-        <div>
-            <Receipt Records = {Records}/>
+        <div className="Container">
+           { Records.map((record, index)=> {
+             return <Receipt recordData={record} key={index} />
+            })  }
         </div>
     )
 }

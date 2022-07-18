@@ -1,0 +1,28 @@
+.app{
+    display: flex;
+    margin: auto;
+    border: 2ch;
+}
+
+.order{
+    display: flex;
+    align-items: flex-start;
+}
+
+.Container{
+    display: flex;
+    justify-content: space-around;
+    border-right: 1ch;
+}
+
+.name{
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+
+.cost{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
